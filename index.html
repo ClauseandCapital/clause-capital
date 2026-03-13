@@ -334,6 +334,7 @@ footer{background:var(--ink-soft);padding:3rem 2.5rem 2rem;position:relative;z-i
   var ADMIN_PASS    = 'cc2026';  // ← change this to your own password
   var TABLE_POSTS   = 'cc_posts';
   var TABLE_SUBS    = 'cc_subscribers';
+  var TABLE_SETTINGS = 'cc_settings';
 </script>
 
 <div class="orb orb1"></div>
@@ -364,33 +365,53 @@ footer{background:var(--ink-soft);padding:3rem 2.5rem 2rem;position:relative;z-i
 </header>
 
 <!-- ═══ TICKER ═══ -->
-<div class="ticker" id="postTicker" style="display:none;">
-  <div class="ticker-track" id="tickerTrack"></div>
+<div class="ticker">
+  <div class="ticker-track">
+    <div class="ticker-item">Employment Rights Bill 2025<span class="ticker-dot"></span></div>
+    <div class="ticker-item">Bank of England Rate Path<span class="ticker-dot"></span></div>
+    <div class="ticker-item">FTSE 350 Diversity Targets<span class="ticker-dot"></span></div>
+    <div class="ticker-item">UK Productivity Gap<span class="ticker-dot"></span></div>
+    <div class="ticker-item">ICO AI Enforcement<span class="ticker-dot"></span></div>
+    <div class="ticker-item">London Fintech Series B<span class="ticker-dot"></span></div>
+    <div class="ticker-item">Net Zero Tax Policy<span class="ticker-dot"></span></div>
+    <div class="ticker-item">Commercial Lease Reforms<span class="ticker-dot"></span></div>
+    <div class="ticker-item">Employment Rights Bill 2025<span class="ticker-dot"></span></div>
+    <div class="ticker-item">Bank of England Rate Path<span class="ticker-dot"></span></div>
+    <div class="ticker-item">FTSE 350 Diversity Targets<span class="ticker-dot"></span></div>
+    <div class="ticker-item">UK Productivity Gap<span class="ticker-dot"></span></div>
+    <div class="ticker-item">ICO AI Enforcement<span class="ticker-dot"></span></div>
+    <div class="ticker-item">London Fintech Series B<span class="ticker-dot"></span></div>
+    <div class="ticker-item">Net Zero Tax Policy<span class="ticker-dot"></span></div>
+    <div class="ticker-item">Commercial Lease Reforms<span class="ticker-dot"></span></div>
+  </div>
 </div>
 
 <!-- ═══ HERO ═══ -->
 <section class="hero">
   <div class="hero-main">
-    <div class="hero-tag" id="heroTag">Editor's Pick</div>
-    <h1 id="heroTitle"></h1>
-    <p class="hero-excerpt" id="heroExcerpt"></p>
-    <div class="hero-meta" id="heroMeta" style="display:none;">
-      <a href="#publishedSection" class="hero-read-btn" id="heroReadBtn">Read the Analysis →</a>
-      <div class="hero-author-chip"><div class="chip-av" id="heroChipAv">CC</div><span id="heroChipText"></span></div>
+    <div class="hero-tag">Editor's Pick · Spring 2026</div>
+    <h1>The Future of<br><em>British</em> Commercial Law<br>Post-Brexit</h1>
+    <p class="hero-excerpt">As international arbitration clauses shift and English jurisdiction faces unprecedented competition from European courts, our legal correspondent examines what this means for UK businesses navigating cross-border contracts in 2026.</p>
+    <div class="hero-meta">
+      <a href="#" class="hero-read-btn">Read the Analysis →</a>
+      <div class="hero-author-chip"><div class="chip-av">FB</div><span>Funda Bozkurt · 12 min</span></div>
     </div>
   </div>
-  <div class="hero-side" id="heroSide" style="display:none;">
-    <div class="side-label">Latest from the review</div>
-    <div id="heroSideCards"></div>
+  <div class="hero-side">
+    <div class="side-label">Trending this week</div>
+    <a class="side-card" href="#"><div class="side-num">01</div><div class="side-cat l">⚖ Law</div><div class="side-title">HMRC's New Digital Reporting Rules for SMEs Explained</div></a>
+    <a class="side-card" href="#"><div class="side-num">02</div><div class="side-cat e">📈 Economics</div><div class="side-title">Why the Bank of England's Rate Path Diverges from the Fed</div></a>
+    <a class="side-card" href="#"><div class="side-num">03</div><div class="side-cat b">🏛 Business</div><div class="side-title">London's Fintech Sector Records Highest Series B Round Total</div></a>
+    <a class="side-card" href="#"><div class="side-num">04</div><div class="side-cat e">📈 Economics</div><div class="side-title">Inflation's Grip on UK Household Spending Finally Easing</div></a>
   </div>
 </section>
 
 <!-- ═══ CAT BAND ═══ -->
 <div class="cat-band">
   <div class="cat-band-inner">
-    <a class="cat-tab" href="#law-sec"><div class="cat-pip l"></div><div><div class="cat-text-label">Section</div><div class="cat-text-name">Law</div></div><div class="cat-count" id="countLaw">0 articles</div></a>
-    <a class="cat-tab" href="#econ-sec"><div class="cat-pip e"></div><div><div class="cat-text-label">Section</div><div class="cat-text-name">Economics</div></div><div class="cat-count" id="countEcon">0 articles</div></a>
-    <a class="cat-tab" href="#biz-sec"><div class="cat-pip b"></div><div><div class="cat-text-label">Section</div><div class="cat-text-name">Business</div></div><div class="cat-count" id="countBiz">0 articles</div></a>
+    <a class="cat-tab" href="#law-sec"><div class="cat-pip l"></div><div><div class="cat-text-label">Section</div><div class="cat-text-name">Law</div></div><div class="cat-count" id="countLaw">14 articles</div></a>
+    <a class="cat-tab" href="#econ-sec"><div class="cat-pip e"></div><div><div class="cat-text-label">Section</div><div class="cat-text-name">Economics</div></div><div class="cat-count" id="countEcon">12 articles</div></a>
+    <a class="cat-tab" href="#biz-sec"><div class="cat-pip b"></div><div><div class="cat-text-label">Section</div><div class="cat-text-name">Business</div></div><div class="cat-count" id="countBiz">11 articles</div></a>
   </div>
 </div>
 
@@ -407,32 +428,32 @@ footer{background:var(--ink-soft);padding:3rem 2.5rem 2rem;position:relative;z-i
   </div>
 
   <!-- Curated -->
-  <div id="curatedSection" style="display:none;">
+  <div id="curatedSection">
     <div class="sec-head reveal" style="margin-top:4rem;">
       <div class="sec-title">Curated Analysis</div>
-      <a class="sec-more" href="#publishedSection">Browse Posts →</a>
+      <a class="sec-more" href="#">View All →</a>
     </div>
     <div class="feat-grid">
-      <div class="card feat reveal" id="curatedCard1" style="display:none;">
+      <div class="card feat reveal">
         <div class="card-stripe a"></div>
-        <div class="card-cat li" id="curated1Cat"></div>
-        <div class="card-title" id="curated1Title"></div>
-        <p class="card-exc" id="curated1Body"></p>
-        <div class="card-foot"><div class="av funda" id="curated1Av">FB</div><div class="card-info"><div class="card-author" id="curated1Author"></div><div class="card-date" id="curated1Date"></div></div><div class="card-time" id="curated1Time"></div></div>
+        <div class="card-cat li" id="curated1Cat">⚖ Law · Featured</div>
+        <div class="card-title" id="curated1Title">The Employment Rights Bill 2025: A Seismic Shift for UK Employers</div>
+        <p class="card-exc" id="curated1Body">New legislation extending unfair dismissal protections from day one of employment will fundamentally alter the relationship between British employers and workers. Funda Bozkurt breaks down the key provisions and the likely flood of tribunal claims to follow.</p>
+        <div class="card-foot"><div class="av funda">FB</div><div class="card-info"><div class="card-author" id="curated1Author">Funda Bozkurt</div><div class="card-date" id="curated1Date">10 March 2026</div></div><div class="card-time" id="curated1Time">12 min read</div></div>
       </div>
-      <div class="card reveal" id="curatedCard2" style="display:none;">
+      <div class="card reveal">
         <div class="card-stripe e"></div>
-        <div class="card-cat e" id="curated2Cat"></div>
-        <div class="card-title" id="curated2Title"></div>
-        <p class="card-exc" id="curated2Body"></p>
-        <div class="card-foot"><div class="av sarp" id="curated2Av">SE</div><div class="card-info"><div class="card-author" id="curated2Author"></div><div class="card-date" id="curated2Date"></div></div><div class="card-time" id="curated2Time"></div></div>
+        <div class="card-cat e" id="curated2Cat">📈 Economics</div>
+        <div class="card-title" id="curated2Title">Interest Rate Cuts, Cautious Consumers: The UK's Fragile Recovery</div>
+        <p class="card-exc" id="curated2Body">The Bank of England's easing cycle has yet to translate into meaningful consumer confidence. Sarp Erol examines the structural forces keeping spending subdued.</p>
+        <div class="card-foot"><div class="av sarp">SE</div><div class="card-info"><div class="card-author" id="curated2Author">Sarp Erol</div><div class="card-date" id="curated2Date">8 March 2026</div></div><div class="card-time" id="curated2Time">9 min read</div></div>
       </div>
-      <div class="card reveal" id="curatedCard3" style="display:none;">
+      <div class="card reveal">
         <div class="card-stripe b"></div>
-        <div class="card-cat b" id="curated3Cat"></div>
-        <div class="card-title" id="curated3Title"></div>
-        <p class="card-exc" id="curated3Body"></p>
-        <div class="card-foot"><div class="av ezel" id="curated3Av">EB</div><div class="card-info"><div class="card-author" id="curated3Author"></div><div class="card-date" id="curated3Date"></div></div><div class="card-time" id="curated3Time"></div></div>
+        <div class="card-cat b" id="curated3Cat">🏛 Business</div>
+        <div class="card-title" id="curated3Title">Scale-Up or Exit? The Strategic Crossroads for UK Founders in 2026</div>
+        <p class="card-exc" id="curated3Body">With venture capital tightening and M&amp;A appetite from US tech giants surging, Ezel Bozkurt profiles three companies navigating this pivotal decision.</p>
+        <div class="card-foot"><div class="av ezel">EB</div><div class="card-info"><div class="card-author" id="curated3Author">Ezel Bozkurt</div><div class="card-date" id="curated3Date">6 March 2026</div></div><div class="card-time" id="curated3Time">11 min read</div></div>
       </div>
     </div>
   </div>
@@ -441,19 +462,31 @@ footer{background:var(--ink-soft);padding:3rem 2.5rem 2rem;position:relative;z-i
   <div class="three-col">
     <div class="col-sec" id="law-sec">
       <div class="col-head l"><span>⚖</span><span class="col-head-title">Law</span></div>
-      <div id="lawList"></div>
+      <a class="mini reveal" href="#"><div class="mini-title">Data Protection Enforcement: ICO Signals Harsher Penalties for AI Firms</div><div class="mini-meta">Funda Bozkurt · 4 Mar · 7 min</div></a>
+      <a class="mini reveal" href="#"><div class="mini-title">Corporate Directors' Duty of Care in the ESG Era: What Courts Expect Now</div><div class="mini-meta">Funda Bozkurt · 28 Feb · 8 min</div></a>
+      <a class="mini reveal" href="#"><div class="mini-title">NDAs Under Scrutiny: Parliament's Push to Limit Confidentiality Clauses</div><div class="mini-meta">Funda Bozkurt · 20 Feb · 6 min</div></a>
+      <a class="mini reveal" href="#"><div class="mini-title">Commercial Lease Renewals: What the 2025 Reforms Change</div><div class="mini-meta">Funda Bozkurt · 14 Feb · 10 min</div></a>
     </div>
     <div class="col-sec" id="econ-sec">
       <div class="col-head e"><span>📈</span><span class="col-head-title">Economics</span></div>
-      <div id="econList"></div>
+      <a class="mini reveal" href="#"><div class="mini-title">UK Productivity Gap: Why Output Per Hour Still Trails Germany and France</div><div class="mini-meta">Sarp Erol · 5 Mar · 9 min</div></a>
+      <a class="mini reveal" href="#"><div class="mini-title">The Housing Crisis as Macroeconomic Risk: Shelter Costs Reshaping Labour Markets</div><div class="mini-meta">Sarp Erol · 27 Feb · 11 min</div></a>
+      <a class="mini reveal" href="#"><div class="mini-title">Green Transition Costs and Who Pays: The Distributional Economics of Net Zero</div><div class="mini-meta">Sarp Erol · 18 Feb · 8 min</div></a>
+      <a class="mini reveal" href="#"><div class="mini-title">Regional Inequality in Post-Industrial Britain: Is Levelling Up Working?</div><div class="mini-meta">Sarp Erol · 10 Feb · 13 min</div></a>
     </div>
     <div class="col-sec" id="biz-sec">
       <div class="col-head b"><span>🏛</span><span class="col-head-title">Business</span></div>
-      <div id="bizList"></div>
+      <a class="mini reveal" href="#"><div class="mini-title">Boardroom Diversity Rules: How FTSE 350 Companies Are Responding to FCA Targets</div><div class="mini-meta">Ezel Bozkurt · 4 Mar · 7 min</div></a>
+      <a class="mini reveal" href="#"><div class="mini-title">Retail's Reinvention: Why Physical Stores Are Making a Comeback in 2026</div><div class="mini-meta">Ezel Bozkurt · 26 Feb · 8 min</div></a>
+      <a class="mini reveal" href="#"><div class="mini-title">Sustainable Finance Taxonomy: What the UK's Own Standard Means for Investors</div><div class="mini-meta">Ezel Bozkurt · 19 Feb · 9 min</div></a>
+      <a class="mini reveal" href="#"><div class="mini-title">The Rise of the CFO: Finance Chiefs Taking Operational Control in UK Firms</div><div class="mini-meta">Ezel Bozkurt · 11 Feb · 6 min</div></a>
     </div>
   </div>
 
-  <div class="pq reveal" id="editorialQuote" style="display:none;"></div>
+  <div class="pq reveal">
+    <div class="pq-text">"Understanding law, economics, and business not as separate disciplines but as interlocking forces is the only way to make sense of modern Britain — and to navigate it."</div>
+    <div class="pq-attr">— The Clause &amp; Capital Editorial Principles</div>
+  </div>
 
   <!-- Authors -->
   <section class="authors-band" id="authors-sec">
@@ -529,6 +562,7 @@ footer{background:var(--ink-soft);padding:3rem 2.5rem 2rem;position:relative;z-i
       <!-- TABS -->
       <div class="admin-tabs" style="background:var(--ink);">
         <button class="admin-tab active" onclick="switchTab('dashboard')">📊 Dashboard</button>
+        <button class="admin-tab" onclick="switchTab('curated')">✨ Curated</button>
         <button class="admin-tab" onclick="switchTab('publish')">✦ Publish</button>
         <button class="admin-tab" onclick="switchTab('posts')">📝 All Posts</button>
         <button class="admin-tab" onclick="switchTab('subscribers')">📧 Subscribers</button>
@@ -549,6 +583,52 @@ footer{background:var(--ink-soft);padding:3rem 2.5rem 2rem;position:relative;z-i
           <div class="stat-card" style="grid-column:span 2;"><div class="stat-num" id="dbStatusDash" style="font-size:1rem;padding-top:.4rem;">Checking…</div><div class="stat-label">Database Status</div></div>
         </div>
         <p style="font-family:'DM Mono',monospace;font-size:.62rem;color:var(--smoke);margin-top:1.5rem;letter-spacing:.08em;">Use the tabs above to publish articles, manage existing posts, or view subscriber emails.</p>
+      </div>
+
+      <!-- TAB: CURATED -->
+      <div id="tab-curated" class="admin-body" style="display:none;">
+        <div class="setup-box">
+          <h3>✦ Curated Analysis Editor</h3>
+          <p>Edit the three cards shown in the Curated Analysis section on the homepage.</p>
+        </div>
+
+        <div class="form-row"><label class="form-label">Featured Card Label</label><input class="form-input" type="text" id="c1Cat" placeholder="⚖ Law · Featured"></div>
+        <div class="form-row"><label class="form-label">Featured Title</label><input class="form-input" type="text" id="c1Title"></div>
+        <div class="form-row"><label class="form-label">Featured Summary</label><textarea class="form-textarea" id="c1Body" style="min-height:120px;"></textarea></div>
+        <div class="form-grid">
+          <div class="form-row"><label class="form-label">Featured Author</label><input class="form-input" type="text" id="c1Author"></div>
+          <div class="form-row"><label class="form-label">Featured Date</label><input class="form-input" type="text" id="c1Date" placeholder="10 March 2026"></div>
+        </div>
+        <div class="form-row"><label class="form-label">Featured Read Time</label><input class="form-input" type="text" id="c1Time" placeholder="12 min read" style="max-width:220px;"></div>
+
+        <hr style="border:none;border-top:1px solid rgba(0,0,0,.08);margin:2rem 0;">
+
+        <div class="form-row"><label class="form-label">Card 2 Label</label><input class="form-input" type="text" id="c2Cat" placeholder="📈 Economics"></div>
+        <div class="form-row"><label class="form-label">Card 2 Title</label><input class="form-input" type="text" id="c2Title"></div>
+        <div class="form-row"><label class="form-label">Card 2 Summary</label><textarea class="form-textarea" id="c2Body" style="min-height:120px;"></textarea></div>
+        <div class="form-grid">
+          <div class="form-row"><label class="form-label">Card 2 Author</label><input class="form-input" type="text" id="c2Author"></div>
+          <div class="form-row"><label class="form-label">Card 2 Date</label><input class="form-input" type="text" id="c2Date" placeholder="8 March 2026"></div>
+        </div>
+        <div class="form-row"><label class="form-label">Card 2 Read Time</label><input class="form-input" type="text" id="c2Time" placeholder="9 min read" style="max-width:220px;"></div>
+
+        <hr style="border:none;border-top:1px solid rgba(0,0,0,.08);margin:2rem 0;">
+
+        <div class="form-row"><label class="form-label">Card 3 Label</label><input class="form-input" type="text" id="c3Cat" placeholder="🏛 Business"></div>
+        <div class="form-row"><label class="form-label">Card 3 Title</label><input class="form-input" type="text" id="c3Title"></div>
+        <div class="form-row"><label class="form-label">Card 3 Summary</label><textarea class="form-textarea" id="c3Body" style="min-height:120px;"></textarea></div>
+        <div class="form-grid">
+          <div class="form-row"><label class="form-label">Card 3 Author</label><input class="form-input" type="text" id="c3Author"></div>
+          <div class="form-row"><label class="form-label">Card 3 Date</label><input class="form-input" type="text" id="c3Date" placeholder="6 March 2026"></div>
+        </div>
+        <div class="form-row"><label class="form-label">Card 3 Read Time</label><input class="form-input" type="text" id="c3Time" placeholder="11 min read" style="max-width:220px;"></div>
+
+        <div style="display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1rem;">
+          <button class="btn-primary" id="saveCuratedBtn" onclick="saveCurated()">Save Curated Section →</button>
+          <button class="btn-secondary" onclick="resetCuratedForm()">Reset Form</button>
+        </div>
+        <div class="msg ok" id="curatedMsgOk">✓ Curated section updated.</div>
+        <div class="msg err" id="curatedMsgErr">✗ <span id="curatedErrText">Could not save curated section.</span></div>
       </div>
 
       <!-- TAB: PUBLISH -->
@@ -637,13 +717,27 @@ CREATE POLICY "posts_delete" ON cc_posts       FOR DELETE USING (true);
 CREATE POLICY "posts_update" ON cc_posts       FOR UPDATE USING (true);
 CREATE POLICY "subs_read"    ON cc_subscribers FOR SELECT USING (true);
 CREATE POLICY "subs_insert"  ON cc_subscribers FOR INSERT WITH CHECK (true);
-CREATE POLICY "subs_delete"  ON cc_subscribers FOR DELETE USING (true);</div>
+CREATE POLICY "subs_delete"  ON cc_subscribers FOR DELETE USING (true);
+
+-- SETTINGS TABLE
+CREATE TABLE IF NOT EXISTS cc_settings (
+  key        text PRIMARY KEY,
+  value      text NOT NULL,
+  updated_at timestamptz DEFAULT now()
+);
+
+ALTER TABLE cc_settings ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "settings_read"   ON cc_settings FOR SELECT USING (true);
+CREATE POLICY "settings_insert" ON cc_settings FOR INSERT WITH CHECK (true);
+CREATE POLICY "settings_update" ON cc_settings FOR UPDATE USING (true);</div>
           <ol class="setup-steps">
             <li>Go to <a href="https://supabase.com" target="_blank">supabase.com</a> → your project → <strong>SQL Editor</strong> → paste &amp; run the SQL above.</li>
             <li>Go to <strong>Project Settings → API</strong>. Copy your <strong>Project URL</strong> and <strong>anon/publishable key</strong>.</li>
             <li>Open <code>index.html</code> in a text editor. Find the <code>SUPABASE_URL</code> and <code>SUPABASE_KEY</code> variables at the top and replace them.</li>
             <li>For <strong>GitHub Pages</strong>: Go to <a href="https://github.com" target="_blank">github.com</a> → New Repository → name it <code>clauseandcapital</code> → upload <code>index.html</code> → Settings → Pages → Deploy from main branch → your site is live at <code>https://yourusername.github.io/clauseandcapital</code></li>
             <li>Optionally change <code>ADMIN_PASS</code> from <code>cc2026</code> to your own password.</li>
+            <li>The Curated tab uses <code>cc_settings</code>. Run the updated SQL above once so curated edits can be saved.</li>
           </ol>
         </div>
       </div>
@@ -680,176 +774,6 @@ function esc(s){
 
 var CAT_LABEL = { l:'⚖ Law', e:'📈 Economics', b:'🏛 Business' };
 
-
-function setText(id, value){
-  var el = document.getElementById(id);
-  if(el) el.textContent = value || '';
-}
-
-function formatDate(dt){
-  if(!dt) return '';
-  return new Date(dt).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});
-}
-
-function excerptText(s, maxLen){
-  s = String(s || '').replace(/\s+/g,' ').trim();
-  if(!s) return '';
-  if(s.length <= maxLen) return s;
-  return s.slice(0, maxLen).trim() + '…';
-}
-
-function initialsFromAuthor(author){
-  var parts = String(author || '').trim().split(/\s+/).filter(Boolean);
-  if(!parts.length) return 'CC';
-  return parts.slice(0,2).map(function(p){ return p.charAt(0).toUpperCase(); }).join('');
-}
-
-function avatarClass(cat){
-  return cat === 'l' ? 'funda' : cat === 'e' ? 'sarp' : 'ezel';
-}
-
-function stripeClass(cat, featured){
-  if(featured) return 'a';
-  return cat === 'l' ? 'l' : cat === 'e' ? 'e' : 'b';
-}
-
-function bodyClass(cat, featured){
-  if(featured) return 'li';
-  return cat === 'l' ? 'l' : cat === 'e' ? 'e' : 'b';
-}
-
-function curatedLabel(cat, featured){
-  var label = CAT_LABEL[cat] || '';
-  return featured ? (label + ' · Featured') : label;
-}
-
-function renderTicker(posts){
-  var ticker = document.getElementById('postTicker');
-  var track = document.getElementById('tickerTrack');
-  if(!ticker || !track) return;
-  if(!posts || !posts.length){
-    ticker.style.display = 'none';
-    track.innerHTML = '';
-    return;
-  }
-  var items = posts.slice(0, 8);
-  var doubled = items.concat(items);
-  track.innerHTML = doubled.map(function(p){
-    return '<div class="ticker-item">'+esc(p.title)+'<span class="ticker-dot"></span></div>';
-  }).join('');
-  ticker.style.display = 'flex';
-}
-
-function renderHeroSide(posts){
-  var box = document.getElementById('heroSide');
-  var cards = document.getElementById('heroSideCards');
-  if(!box || !cards) return;
-  if(!posts || !posts.length){
-    box.style.display = 'none';
-    cards.innerHTML = '';
-    return;
-  }
-  var items = posts.slice(0, 4);
-  cards.innerHTML = items.map(function(p, i){
-    return '<a class="side-card" href="#publishedSection">'
-      + '<div class="side-num">' + String(i+1).padStart(2,'0') + '</div>'
-      + '<div class="side-cat ' + esc(p.cat) + '">' + esc(CAT_LABEL[p.cat] || p.cat) + '</div>'
-      + '<div class="side-title">' + esc(p.title) + '</div>'
-      + '</a>';
-  }).join('');
-  box.style.display = 'flex';
-}
-
-function renderEditorsPick(posts){
-  var title = document.getElementById('heroTitle');
-  var excerpt = document.getElementById('heroExcerpt');
-  var meta = document.getElementById('heroMeta');
-  var chipAv = document.getElementById('heroChipAv');
-  var chipText = document.getElementById('heroChipText');
-  if(!title || !excerpt || !meta || !chipAv || !chipText) return;
-  if(!posts || !posts.length){
-    title.innerHTML = '';
-    excerpt.textContent = '';
-    chipText.textContent = '';
-    meta.style.display = 'none';
-    return;
-  }
-  var post = posts[0];
-  title.innerHTML = esc(post.title || '');
-  excerpt.textContent = excerptText(post.body, 240);
-  chipAv.textContent = initialsFromAuthor(post.author);
-  chipText.textContent = (post.author || '') + ' · ' + (post.read_time || 8) + ' min';
-  meta.style.display = 'flex';
-}
-
-function renderCategoryColumns(posts){
-  [
-    {cat:'l', id:'lawList'},
-    {cat:'e', id:'econList'},
-    {cat:'b', id:'bizList'}
-  ].forEach(function(cfg){
-    var box = document.getElementById(cfg.id);
-    if(!box) return;
-    var items = (posts || []).filter(function(p){ return p.cat === cfg.cat; }).slice(0,4);
-    if(!items.length){
-      box.innerHTML = '';
-      return;
-    }
-    box.innerHTML = items.map(function(p){
-      return '<a class="mini reveal visible" href="#publishedSection"><div class="mini-title">' + esc(p.title) + '</div><div class="mini-meta">' + esc(p.author) + ' · ' + formatDate(p.created_at) + ' · ' + (p.read_time || 8) + ' min</div></a>';
-    }).join('');
-  });
-}
-
-function applyCuratedPosts(posts){
-  var section = document.getElementById('curatedSection');
-  var available = [];
-  ['l','e','b'].forEach(function(cat){
-    var match = (posts || []).find(function(p){ return p.cat === cat; });
-    if(match) available.push(match);
-  });
-
-  if(!section) return;
-  if(!available.length){
-    section.style.display = 'none';
-    ['1','2','3'].forEach(function(i){
-      var card = document.getElementById('curatedCard'+i);
-      if(card) card.style.display = 'none';
-    });
-    return;
-  }
-
-  section.style.display = 'block';
-  ['1','2','3'].forEach(function(i){
-    var card = document.getElementById('curatedCard'+i);
-    if(card) card.style.display = 'none';
-  });
-
-  available.forEach(function(post, idx){
-    var n = String(idx + 1);
-    var featured = idx === 0;
-    var card = document.getElementById('curatedCard'+n);
-    if(!card) return;
-    card.style.display = 'block';
-    card.className = featured ? 'card feat reveal visible' : 'card reveal visible';
-    var stripe = card.querySelector('.card-stripe');
-    if(stripe) stripe.className = 'card-stripe ' + stripeClass(post.cat, featured);
-    var catEl = document.getElementById('curated'+n+'Cat');
-    if(catEl) catEl.className = 'card-cat ' + bodyClass(post.cat, featured);
-    setText('curated'+n+'Cat', curatedLabel(post.cat, featured));
-    setText('curated'+n+'Title', post.title || '');
-    setText('curated'+n+'Body', excerptText(post.body, featured ? 260 : 160));
-    setText('curated'+n+'Author', post.author || '');
-    setText('curated'+n+'Date', formatDate(post.created_at));
-    setText('curated'+n+'Time', (post.read_time || 8) + ' min read');
-    var av = document.getElementById('curated'+n+'Av');
-    if(av){
-      av.className = 'av ' + avatarClass(post.cat);
-      av.textContent = initialsFromAuthor(post.author);
-    }
-  });
-}
-
 /* ── DB STATUS ── */
 async function checkDb(){
   var dot = document.getElementById('dbDot');
@@ -882,12 +806,6 @@ async function loadPosts(){
   box.innerHTML='<div class="posts-loading"><div class="spinner"></div>Loading from database…</div>';
   if(!isConfigured()){
     box.innerHTML='<div class="no-posts">Database not connected — click ⚙ Admin to set up.</div>';
-    updateCounts([]);
-    renderTicker([]);
-    renderHeroSide([]);
-    renderEditorsPick([]);
-    applyCuratedPosts([]);
-    renderCategoryColumns([]);
     return;
   }
   try{
@@ -896,13 +814,7 @@ async function loadPosts(){
     var posts = await r.json();
     if(!posts.length){
       box.innerHTML='<div class="no-posts">No articles yet — be the first to publish!</div>';
-      updateCounts(posts);
-      renderTicker(posts);
-      renderHeroSide(posts);
-      renderEditorsPick(posts);
-      applyCuratedPosts(posts);
-      renderCategoryColumns(posts);
-      return;
+      updateCounts(posts); return;
     }
     box.innerHTML = posts.map(function(p){
       return '<div class="post-card '+esc(p.cat)+'">'
@@ -915,26 +827,15 @@ async function loadPosts(){
         +'</div>';
     }).join('');
     updateCounts(posts);
-    renderTicker(posts);
-    renderHeroSide(posts);
-    renderEditorsPick(posts);
-    applyCuratedPosts(posts);
-    renderCategoryColumns(posts);
   } catch(e){
     box.innerHTML='<div class="no-posts" style="color:var(--biz);">Error: '+esc(e.message)+'</div>';
-    updateCounts([]);
-    renderTicker([]);
-    renderHeroSide([]);
-    renderEditorsPick([]);
-    applyCuratedPosts([]);
-    renderCategoryColumns([]);
   }
 }
 
 function updateCounts(posts){
-  document.getElementById('countLaw').textContent  = posts.filter(function(p){return p.cat==='l';}).length+' articles';
-  document.getElementById('countEcon').textContent = posts.filter(function(p){return p.cat==='e';}).length+' articles';
-  document.getElementById('countBiz').textContent  = posts.filter(function(p){return p.cat==='b';}).length+' articles';
+  document.getElementById('countLaw').textContent  = (14+posts.filter(function(p){return p.cat==='l';}).length)+' articles';
+  document.getElementById('countEcon').textContent = (12+posts.filter(function(p){return p.cat==='e';}).length)+' articles';
+  document.getElementById('countBiz').textContent  = (11+posts.filter(function(p){return p.cat==='b';}).length)+' articles';
 }
 
 /* ── PUBLISH ── */
@@ -1115,6 +1016,173 @@ function exportCSV(){
   a.click();
 }
 
+var DEFAULT_CURATED = {
+  card1: {
+    cat: '⚖ Law · Featured',
+    title: 'The Employment Rights Bill 2025: A Seismic Shift for UK Employers',
+    body: 'New legislation extending unfair dismissal protections from day one of employment will fundamentally alter the relationship between British employers and workers. Funda Bozkurt breaks down the key provisions and the likely flood of tribunal claims to follow.',
+    author: 'Funda Bozkurt',
+    date: '10 March 2026',
+    time: '12 min read'
+  },
+  card2: {
+    cat: '📈 Economics',
+    title: 'Interest Rate Cuts, Cautious Consumers: The UK\'s Fragile Recovery',
+    body: 'The Bank of England\'s easing cycle has yet to translate into meaningful consumer confidence. Sarp Erol examines the structural forces keeping spending subdued.',
+    author: 'Sarp Erol',
+    date: '8 March 2026',
+    time: '9 min read'
+  },
+  card3: {
+    cat: '🏛 Business',
+    title: 'Scale-Up or Exit? The Strategic Crossroads for UK Founders in 2026',
+    body: 'With venture capital tightening and M&amp;A appetite from US tech giants surging, Ezel Bozkurt profiles three companies navigating this pivotal decision.',
+    author: 'Ezel Bozkurt',
+    date: '6 March 2026',
+    time: '11 min read'
+  }
+};
+
+function cloneCuratedDefaults(){
+  return JSON.parse(JSON.stringify(DEFAULT_CURATED));
+}
+
+function decodeHtml(s){
+  var t = document.createElement('textarea');
+  t.innerHTML = s || '';
+  return t.value;
+}
+
+function getCuratedPayloadFromForm(){
+  return {
+    card1: {cat:document.getElementById('c1Cat').value.trim(), title:document.getElementById('c1Title').value.trim(), body:document.getElementById('c1Body').value.trim(), author:document.getElementById('c1Author').value.trim(), date:document.getElementById('c1Date').value.trim(), time:document.getElementById('c1Time').value.trim()},
+    card2: {cat:document.getElementById('c2Cat').value.trim(), title:document.getElementById('c2Title').value.trim(), body:document.getElementById('c2Body').value.trim(), author:document.getElementById('c2Author').value.trim(), date:document.getElementById('c2Date').value.trim(), time:document.getElementById('c2Time').value.trim()},
+    card3: {cat:document.getElementById('c3Cat').value.trim(), title:document.getElementById('c3Title').value.trim(), body:document.getElementById('c3Body').value.trim(), author:document.getElementById('c3Author').value.trim(), date:document.getElementById('c3Date').value.trim(), time:document.getElementById('c3Time').value.trim()}
+  };
+}
+
+function fillCuratedForm(data){
+  data = data || cloneCuratedDefaults();
+  document.getElementById('c1Cat').value = data.card1.cat || '';
+  document.getElementById('c1Title').value = data.card1.title || '';
+  document.getElementById('c1Body').value = decodeHtml(data.card1.body || '');
+  document.getElementById('c1Author').value = data.card1.author || '';
+  document.getElementById('c1Date').value = data.card1.date || '';
+  document.getElementById('c1Time').value = data.card1.time || '';
+  document.getElementById('c2Cat').value = data.card2.cat || '';
+  document.getElementById('c2Title').value = data.card2.title || '';
+  document.getElementById('c2Body').value = decodeHtml(data.card2.body || '');
+  document.getElementById('c2Author').value = data.card2.author || '';
+  document.getElementById('c2Date').value = data.card2.date || '';
+  document.getElementById('c2Time').value = data.card2.time || '';
+  document.getElementById('c3Cat').value = data.card3.cat || '';
+  document.getElementById('c3Title').value = data.card3.title || '';
+  document.getElementById('c3Body').value = decodeHtml(data.card3.body || '');
+  document.getElementById('c3Author').value = data.card3.author || '';
+  document.getElementById('c3Date').value = data.card3.date || '';
+  document.getElementById('c3Time').value = data.card3.time || '';
+}
+
+function setText(id, value){
+  var el = document.getElementById(id);
+  if(el) el.textContent = value || '';
+}
+
+function setHtml(id, value){
+  var el = document.getElementById(id);
+  if(el) el.innerHTML = value || '';
+}
+
+function applyCuratedData(data){
+  data = data || cloneCuratedDefaults();
+  setText('curated1Cat', data.card1.cat);
+  setText('curated1Title', data.card1.title);
+  setHtml('curated1Body', data.card1.body);
+  setText('curated1Author', data.card1.author);
+  setText('curated1Date', data.card1.date);
+  setText('curated1Time', data.card1.time);
+  setText('curated2Cat', data.card2.cat);
+  setText('curated2Title', data.card2.title);
+  setHtml('curated2Body', data.card2.body);
+  setText('curated2Author', data.card2.author);
+  setText('curated2Date', data.card2.date);
+  setText('curated2Time', data.card2.time);
+  setText('curated3Cat', data.card3.cat);
+  setText('curated3Title', data.card3.title);
+  setHtml('curated3Body', data.card3.body);
+  setText('curated3Author', data.card3.author);
+  setText('curated3Date', data.card3.date);
+  setText('curated3Time', data.card3.time);
+}
+
+async function loadCurated(){
+  var data = cloneCuratedDefaults();
+  if(!isConfigured()){
+    applyCuratedData(data);
+    if(document.getElementById('c1Title')) fillCuratedForm(data);
+    return;
+  }
+  try{
+    var r = await fetch(SUPABASE_URL+'/rest/v1/'+TABLE_SETTINGS+'?key=eq.curated_content&select=*',{headers:dbHeaders()});
+    if(r.ok){
+      var rows = await r.json();
+      if(rows.length && rows[0].value) data = JSON.parse(rows[0].value);
+    }
+  } catch(e){}
+  applyCuratedData(data);
+  if(document.getElementById('c1Title')) fillCuratedForm(data);
+}
+
+function resetCuratedForm(){
+  fillCuratedForm(cloneCuratedDefaults());
+}
+
+async function saveCurated(){
+  if(!isConfigured()){
+    showCuratedMsg('err','Database not configured — go to the Setup tab.');
+    return;
+  }
+  var payload = getCuratedPayloadFromForm();
+  if(!payload.card1.title || !payload.card2.title || !payload.card3.title){
+    showCuratedMsg('err','Please fill in all three curated titles.');
+    return;
+  }
+  var btn = document.getElementById('saveCuratedBtn');
+  btn.disabled = true;
+  btn.textContent = 'Saving…';
+  try{
+    var r = await fetch(SUPABASE_URL+'/rest/v1/'+TABLE_SETTINGS, {
+      method:'POST',
+      headers:{
+        'apikey': SUPABASE_KEY,
+        'Authorization': 'Bearer ' + SUPABASE_KEY,
+        'Content-Type': 'application/json',
+        'Prefer': 'resolution=merge-duplicates,return=representation'
+      },
+      body: JSON.stringify([{key:'curated_content',value:JSON.stringify(payload),updated_at:new Date().toISOString()}])
+    });
+    if(!r.ok) throw new Error(await r.text());
+    applyCuratedData(payload);
+    showCuratedMsg('ok');
+  } catch(e){
+    showCuratedMsg('err', e.message);
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Save Curated Section →';
+  }
+}
+
+function showCuratedMsg(type, txt){
+  document.getElementById('curatedMsgOk').style.display='none';
+  document.getElementById('curatedMsgErr').style.display='none';
+  if(type==='err' && txt) document.getElementById('curatedErrText').textContent = txt;
+  document.getElementById(type==='ok' ? 'curatedMsgOk' : 'curatedMsgErr').style.display='block';
+  setTimeout(function(){
+    document.getElementById('curatedMsgOk').style.display='none';
+    document.getElementById('curatedMsgErr').style.display='none';
+  },7000);
+}
+
 /* ── DASHBOARD STATS ── */
 async function loadDashStats(){
   if(!isConfigured()) return;
@@ -1143,6 +1211,7 @@ function openAdmin(){
     document.getElementById('pwScreen').style.display='none';
     document.getElementById('adminDash').style.display='block';
     loadDashStats();
+    loadCurated();
   }
 }
 function closeAdmin(){
@@ -1160,6 +1229,7 @@ function checkPw(){
     document.getElementById('adminDash').style.display='block';
     document.getElementById('setupWarning').style.display=isConfigured()?'none':'block';
     loadDashStats();
+    loadCurated();
   } else {
     document.getElementById('pwError').style.display='block';
     document.getElementById('pwInput').style.borderColor='var(--biz)';
@@ -1170,7 +1240,7 @@ function checkPw(){
 function switchTab(name){
   document.querySelectorAll('.admin-tab').forEach(function(t){ t.classList.remove('active'); });
   event.currentTarget.classList.add('active');
-  ['dashboard','publish','posts','subscribers','setup'].forEach(function(t){
+  ['dashboard','curated','publish','posts','subscribers','setup'].forEach(function(t){
     var el = document.getElementById('tab-'+t);
     if(el) el.style.display = t===name?'block':'none';
   });
@@ -1178,6 +1248,7 @@ function switchTab(name){
   if(name==='posts') loadAdminPosts();
   if(name==='subscribers') loadSubscribers();
   if(name==='dashboard') loadDashStats();
+  if(name==='curated') loadCurated();
 }
 
 function syncCat(){
@@ -1225,6 +1296,7 @@ document.querySelectorAll('.card').forEach(function(card){
 /* ── INIT ── */
 checkDb();
 loadPosts();
+loadCurated();
 setInterval(loadPosts, 60000);
 </script>
 </body>
